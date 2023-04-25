@@ -1,0 +1,282 @@
+@import 'media'
+@import 'fonts'
+@import 'anim'
+
+*, *::before, *::after
+    margin: 0
+    padding: 0
+    border: none
+    box-sizing: border-box 
+
+html, .body 
+    height: 100%
+    min-width: 320px 
+    background-color: #000
+
+.body 
+    font-family: "Proxima Nova"
+
+.wrapper 
+    min-height: 0%
+    display: flex
+    flex-direction: column
+    overflow: hidden
+
+.main 
+    flex: 1 1 auto
+    overflow: hidden
+
+[class*="__container"]
+    max-width: 1280px 
+    margin: 0 auto
+    @include _1320
+        margin: 0 40px
+
+body::-webkit-scrollbar 
+    width: 7px             
+
+
+body::-webkit-scrollbar-track 
+    background: #000
+
+
+body::-webkit-scrollbar-thumb 
+    background-color: #F9B400    /* цвет бегунка */
+    border-radius: 15px     /* округлось бегунка */
+    border: 2px solid #000  /* отступ вокруг бегунка */
+
+
+body 
+    .header 
+        padding-top: 66px
+        background: url('../img/back.png') 100% 100%/cover no-repeat
+        height: 750px
+        @include _979
+            background: url('../img/back.png')  60% 100%/cover no-repeat
+            height: 550px
+        @include _768 
+            height: 835px
+            background: url('../img/back_mob.png') 100% 100%/cover no-repeat
+            padding-top: 10px
+        &__menu
+            display: flex
+            justify-content: space-between
+            align-items: center
+        &__logo 
+            margin-left: -30px
+            @include _768 
+                margin-left: -20px
+            img 
+                @include _768
+                    width: 100%
+
+        &__local
+            display: flex
+            align-items: center
+            background: rgba(0, 0, 0, 0.5)
+            border: 1px solid #E0DFDF
+            border-radius: 10px
+            padding: 10px 20px
+            text-decoration: none
+            p
+                font-family: 'Proxima Nova'
+                font-style: normal
+                font-weight: 700
+                font-size: 14px
+                line-height: 17px
+                color: #E0DFDF
+                margin-right: 10px
+        &__info
+            margin-top: 10px
+            display: flex
+            flex-direction: column
+            max-width: 540px
+            h2
+                font-family: 'Gotham Pro'
+                font-style: normal
+                font-weight: 700
+                font-size: 38px
+                line-height: 100%
+                text-transform: uppercase
+                color: #FFFFFF
+                @include _979
+                    font-size: 26px
+                @include _768 
+                    font-size: 22px
+                    text-align: center
+            h4
+                font-family: 'Gotham Pro'
+                font-style: normal
+                font-weight: 400
+                font-size: 109px
+                line-height: 100%
+                text-align: center
+                text-transform: uppercase
+                color: #FFFFFF
+                transform: rotate(-1deg)
+                max-width: 440px
+                background: linear-gradient(94.47deg, #F9B400 0.44%, #FC8702 99.84%)
+                box-shadow: 0px 2.39767px 8.39186px rgba(0, 0, 0, 0.7)
+                margin-top: 14px
+                @include _979
+                    font-size: 80px
+                    max-width: 320px
+                    margin-top: 20px
+                @include _768 
+                    margin-top: 10px
+                    font-size: 62px
+            h3 
+                font-family: 'Gotham Pro'
+                font-style: normal
+                font-weight: 700
+                font-size: 38px
+                line-height: 100%
+                text-transform: uppercase
+                color: #FFFFFF
+                margin-top: 28px
+                @include _979
+                    font-size: 26px
+                @include _768 
+                    margin-top: 25px
+                    text-align: center
+                    font-size: 22px
+            a 
+                margin-top: 33px
+                background: linear-gradient(93.7deg, #F9B400 0%, #FC8702 100%)
+                box-shadow: 0px 0px 65.6651px rgba(250, 154, 1, 0.7)
+                border-radius: 126.474px
+                font-family: 'Gotham Pro'
+                font-style: normal
+                font-weight: 700
+                font-size: 24px
+                line-height: 125%
+                color: #FFFFFF
+                display: block
+                text-decoration: none
+                max-width: 330px
+                padding: 20px 0px
+                text-align: center
+                @include _979
+                    max-width: 280px
+                @include _768 
+                    text-align: center
+                    width: 90%
+                    margin: 30px auto 0
+                    padding: 10px 0px
+                    font-size: 16px
+                    text-transform: uppercase
+        &__links-mob
+            display: none
+            @include _768
+                display: block 
+        &__links-mob a
+            @include _768
+                margin-top: 10px
+                border: none
+                background: none
+                box-shadow: none
+
+
+    .main 
+        .proposition
+            margin-top: 66px
+            @include _979
+                margin-top: 0
+            @include _768
+                display: none
+            &__images
+                display: flex
+                justify-content: space-between
+                align-items: center
+                height: 250px
+            &__img
+                display: flex
+                flex-direction: column
+                align-items: center
+                width: 250px
+                @include _979
+                    width: 200px
+                .link img
+                    transition: all 0.5s
+                .link:hover > img 
+                    transition: all 0.5s
+                    transform: scale(1.05)
+                p
+                    font-family: 'Proxima Nova'
+                    font-style: normal
+                    font-weight: 700
+                    font-size: 23px
+                    line-height: 25px
+                    text-align: center
+                    letter-spacing: 0.0131502px
+                    text-transform: uppercase
+                    color: #FFFFFF
+                    max-width: 250px
+                    position: relative
+                    text-decoration: none
+                    @include _979
+                        font-size: 20px
+                .second, .first
+                    top: 20px
+            &__links 
+                margin-top: 52px
+            &__link 
+                background: linear-gradient(93.7deg, #F9B400 0%, #FC8702 100%)
+                box-shadow: 0px 0px 65.6651px rgba(250, 154, 1, 0.7)
+                border-radius: 126.474px
+                font-family: 'Gotham Pro'
+                font-style: normal
+                font-weight: 700
+                font-size: 24px
+                line-height: 125%
+                color: #FFFFFF
+                text-decoration: none
+                padding: 20px 0px
+                display: block
+                margin: 0 auto
+                max-width: 330px
+                text-align: center
+
+        .footer 
+            margin-top: 125px 
+            margin-bottom: 35px 
+            @include _979
+                margin-top: 50px
+            @include _768
+                margin-top: 30px
+            &__line
+                border: 1px solid rgba(255, 255, 255, 0.12)
+                color: rgba(255, 255, 255, 0.12)
+                text-align: center
+                display: block
+                margin: 0 auto
+            &__partners
+                margin-top: 25px
+                img
+                    width: 100%
+            .decs 
+                @include _768
+                    display: none
+            .mob 
+                display: none
+                @include _768
+                    display: block
+            &__info
+                margin-top: 25px
+                display: flex
+                justify-content: space-between
+                align-items: center
+                @include _768
+                    flex-direction: column
+            &__logo
+                margin-right: 15px
+            &__text
+                font-family: 'Proxima Nova'
+                font-style: normal
+                font-weight: 400
+                font-size: 12px
+                line-height: 18px
+                color: rgba(255, 255, 255, 0.47)
+                @include _768
+                    margin-top: 20px
+                    text-align: center
