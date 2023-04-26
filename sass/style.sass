@@ -107,7 +107,7 @@ body
             h4
                 font-family: 'Gotham Pro'
                 font-style: normal
-                font-weight: 400
+                font-weight: 700
                 font-size: 109px
                 line-height: 100%
                 text-align: center
@@ -143,8 +143,7 @@ body
             a 
                 margin-top: 33px
                 background: linear-gradient(93.7deg, #F9B400 0%, #FC8702 100%)
-                box-shadow: 0px 0px 65.6651px rgba(250, 154, 1, 0.7)
-                border-radius: 126.474px
+                border-radius: 126px
                 font-family: 'Gotham Pro'
                 font-style: normal
                 font-weight: 700
@@ -156,6 +155,9 @@ body
                 max-width: 330px
                 padding: 20px 0px
                 text-align: center
+                transition: 0.3s
+                &:hover
+                    box-shadow: 0px 0px 65.6651px rgba(250, 154, 1, 0.7)
                 @include _979
                     max-width: 280px
                 @include _768 
@@ -196,11 +198,6 @@ body
                 width: 250px
                 @include _979
                     width: 200px
-                .link img
-                    transition: all 0.5s
-                .link:hover > img 
-                    transition: all 0.5s
-                    transform: scale(1.05)
                 p
                     font-family: 'Proxima Nova'
                     font-style: normal
@@ -222,7 +219,7 @@ body
                 margin-top: 52px
             &__link 
                 background: linear-gradient(93.7deg, #F9B400 0%, #FC8702 100%)
-                box-shadow: 0px 0px 65.6651px rgba(250, 154, 1, 0.7)
+                // box-shadow: 0px 0px 65.6651px rgba(250, 154, 1, 0.7)
                 border-radius: 126.474px
                 font-family: 'Gotham Pro'
                 font-style: normal
@@ -236,6 +233,9 @@ body
                 margin: 0 auto
                 max-width: 330px
                 text-align: center
+                transition: 0.3s
+                &:hover
+                    box-shadow: 0px 0px 65.6651px rgba(250, 154, 1, 0.7)
 
         .footer 
             margin-top: 125px 

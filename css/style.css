@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Proxima Nova";
   src: url("../fonts/ProximaNova-Regular.woff");
@@ -66,6 +67,22 @@
   100% {
     opacity: 0;
     transform: translateX(5vw); } }
+.heart {
+  animation-name: anime;
+  /* имя кейфрейма для анимации */
+  animation-duration: 700ms;
+  /* длительность анимации */
+  animation-iteration-count: infinite;
+  /* количество повторений, в данном случае - бесконечно */
+  animation-direction: alternate;
+  /* проигрывать анимацию в прямом и в обратном порядке */
+  animation-timing-function: ease-in; }
+
+@keyframes anime {
+  0% {
+    transform: scale(1); }
+  100% {
+    transform: scale(1.1); } }
 *, *::before, *::after {
   margin: 0;
   padding: 0;
@@ -172,7 +189,7 @@ body .header {
     body .header__info h4 {
       font-family: "Gotham Pro";
       font-style: normal;
-      font-weight: 400;
+      font-weight: 700;
       font-size: 109px;
       line-height: 100%;
       text-align: center;
@@ -212,8 +229,7 @@ body .header {
     body .header__info a {
       margin-top: 33px;
       background: linear-gradient(93.7deg, #F9B400 0%, #FC8702 100%);
-      box-shadow: 0px 0px 65.6651px rgba(250, 154, 1, 0.7);
-      border-radius: 126.474px;
+      border-radius: 126px;
       font-family: "Gotham Pro";
       font-style: normal;
       font-weight: 700;
@@ -224,7 +240,10 @@ body .header {
       text-decoration: none;
       max-width: 330px;
       padding: 20px 0px;
-      text-align: center; }
+      text-align: center;
+      transition: 0.3s; }
+      body .header__info a:hover {
+        box-shadow: 0px 0px 65.6651px rgba(250, 154, 1, 0.7); }
       @media (max-width: 979px) {
         body .header__info a {
           max-width: 280px; } }
@@ -268,11 +287,6 @@ body .main .proposition {
     @media (max-width: 979px) {
       body .main .proposition__img {
         width: 200px; } }
-    body .main .proposition__img .link img {
-      transition: all 0.5s; }
-    body .main .proposition__img .link:hover > img {
-      transition: all 0.5s;
-      transform: scale(1.05); }
     body .main .proposition__img p {
       font-family: "Proxima Nova";
       font-style: normal;
@@ -295,7 +309,6 @@ body .main .proposition {
     margin-top: 52px; }
   body .main .proposition__link {
     background: linear-gradient(93.7deg, #F9B400 0%, #FC8702 100%);
-    box-shadow: 0px 0px 65.6651px rgba(250, 154, 1, 0.7);
     border-radius: 126.474px;
     font-family: "Gotham Pro";
     font-style: normal;
@@ -308,7 +321,10 @@ body .main .proposition {
     display: block;
     margin: 0 auto;
     max-width: 330px;
-    text-align: center; }
+    text-align: center;
+    transition: 0.3s; }
+    body .main .proposition__link:hover {
+      box-shadow: 0px 0px 65.6651px rgba(250, 154, 1, 0.7); }
 body .main .footer {
   margin-top: 125px;
   margin-bottom: 35px; }
