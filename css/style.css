@@ -87,7 +87,11 @@
   margin: 0;
   padding: 0;
   border: none;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none; }
 
 html, .body {
   height: 100%;
