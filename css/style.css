@@ -83,6 +83,151 @@
     transform: scale(1); }
   100% {
     transform: scale(1.1); } }
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("../fonts/ProximaNova-Regular.woff");
+  font-weight: 400; }
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("../fonts/ProximaNova-Bold.woff");
+  font-weight: 700; }
+@font-face {
+  font-family: "Gotham Pro";
+  src: url("../fonts/GothamPro.woff");
+  font-weight: 400; }
+@font-face {
+  font-family: "Gotham Pro";
+  src: url("../fonts/GothamPro-Bold.woff");
+  font-weight: 700; }
+.arrowAnim {
+  width: 0px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  @media (max-width: 768px) {
+    .arrowAnim {
+      display: none; } }
+
+.arrow {
+  width: 25px;
+  height: 32px;
+  background: url("../img/heard.png") 100%/cover no-repeat; }
+  @media (max-width: 979px) {
+    .arrow {
+      width: 15px;
+      height: 22px; } }
+  @media (max-width: 768px) {
+    .arrow {
+      display: none; } }
+
+.arrowSliding {
+  position: absolute;
+  -webkit-animation: slide 4s linear infinite;
+  animation: slide 4s linear infinite; }
+
+.delay1 {
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s; }
+
+.delay2 {
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s; }
+
+.delay3 {
+  -webkit-animation-delay: 3s;
+  animation-delay: 3s; }
+
+@keyframes slide {
+  0% {
+    opacity: 0;
+    transform: translateX(-5vw); }
+  20% {
+    opacity: 1;
+    transform: translateX(-3vw); }
+  80% {
+    opacity: 1;
+    transform: translateX(3vw); }
+  100% {
+    opacity: 0;
+    transform: translateX(5vw); } }
+.heart {
+  animation-name: anime;
+  /* имя кейфрейма для анимации */
+  animation-duration: 700ms;
+  /* длительность анимации */
+  animation-iteration-count: infinite;
+  /* количество повторений, в данном случае - бесконечно */
+  animation-direction: alternate;
+  /* проигрывать анимацию в прямом и в обратном порядке */
+  animation-timing-function: ease-in; }
+
+@keyframes anime {
+  0% {
+    transform: scale(1); }
+  100% {
+    transform: scale(1.1); } }
+.dropbtn {
+  background: rgba(0, 0, 0, 0.5);
+  border: 2px solid #E0DFDF;
+  border-radius: 10px;
+  width: 76px;
+  height: 37px;
+  font-family: "Proxima Nova";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #E0DFDF;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .dropbtn img {
+    margin-left: 5px; }
+
+.dropdown {
+  position: relative; }
+  .dropdown .dropdown-content {
+    display: none;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    border: 2px solid #E0DFDF;
+    border-radius: 10px;
+    width: 76px;
+    z-index: 1; }
+  .dropdown .dropdown-content a {
+    color: black;
+    justify-content: space-between;
+    display: flex;
+    padding: 14px 7px;
+    text-decoration: none;
+    font-family: "Proxima Nova";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 9px;
+    line-height: 17px;
+    text-align: center;
+    color: #E0DFDF;
+    cursor: pointer;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  .dropdown .dropdown-content a:hover .dropbtn {
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px; }
+  .dropdown:hover .dropdown-content {
+    display: block;
+    position: absolute;
+    top: 35px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px; }
+
 *, *::before, *::after {
   margin: 0;
   padding: 0;
